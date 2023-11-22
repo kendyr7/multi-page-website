@@ -1,0 +1,112 @@
+.about {
+    &__row {
+        display: flex;
+
+        @include respond-below('med') {
+            height: auto;
+            flex-direction: column-reverse;
+
+            &:nth-child(2) {
+                flex-direction: column;
+            }
+        }
+
+        &--first {
+            .about__col-1 {
+                position: relative;
+                color: $c-white;
+                background-color: $c-black;
+
+                @include respond-below('med') {
+                    &::after {
+                        content: '';
+                        height: 0.6rem;
+                        width: 25%;
+                        margin-left: 3.3rem;
+                        background-image: linear-gradient(192deg, $c-blue-light, $c-pink-desat, $c-orange-light);
+                        top: 0;
+                        left: 0;
+                        position: absolute;
+                    }
+                }
+            }
+
+            .about__description {
+                border-left: 0.6rem solid;
+                border-image: linear-gradient(180deg, $c-blue-light, $c-pink-desat, $c-orange-light) 1;
+                padding-left: 10.6rem;
+
+                @include respond-below('x-lg') {
+                    padding-left: 4.8rem;
+                }
+
+                @include respond-below('med') {
+                    border-left: 0;
+                }
+            }
+        }
+    }
+
+    &__col-1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex: 1 1 60rem;
+
+        @include respond-below('med') {
+            flex: 1 0 auto;
+        }
+    }
+
+    &__col-2 {
+        flex: 3 4 auto;
+
+        @include respond-below('med') {
+            flex: 1 0 auto;
+        }
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__description {
+        padding: 0 11.2rem;
+        margin: 17.3rem 0;
+
+        @include respond-below('x-lg') {
+            padding: 0 5.4rem;
+            margin: 17.3rem 0;
+        }
+
+        @include respond-below('med') {
+            margin: 7.2rem 0;
+        }
+
+        @include respond-below('sm') {
+            padding: 0 3.3rem;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            margin-bottom: 2.1rem;
+
+            @include respond-below('med') {
+                margin-bottom: 1.6rem;
+            }
+        }
+
+        p {
+            opacity: 60%;
+            margin-bottom: 4.8rem;
+
+            @include respond-below('med') {
+                margin-bottom: 2.3rem;
+            }
+        }
+    }
+}

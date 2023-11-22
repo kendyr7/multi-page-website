@@ -1,0 +1,42 @@
+html {
+    height: 100vh;
+    box-sizing: border-box;
+    position: relative;
+}
+
+body {
+    min-height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+.page-container {
+    position: absolute;
+    top: 7.2rem;
+    z-index: 1;
+    width: 100%;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+}

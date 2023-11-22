@@ -1,0 +1,77 @@
+.btn {
+    text-align: center;
+    height: 4rem;
+    width: 100%;
+    padding: 1.2rem 0;
+
+    transition: color 0.2s ease, background-color 0.2s ease;
+
+    &--header {
+        width: 15.8rem;
+
+        @include respond-below('sm-med') {
+            width: 95%;
+            padding: 1.4rem 0;
+            font-size: 1.5rem;
+        }
+    }
+
+    &--black {
+        color: $c-white;
+        background-color: #0073d2;
+
+        &:hover {
+            color: $c-black;
+            background-color: $c-grey;
+        }
+    }
+
+    &--white {
+        color: $c-black;
+        background-color: $c-white;
+
+        &:hover {
+            background-color: $c-grey;
+        }
+    }
+}
+
+.hamburger-btn {
+    position: relative;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+
+    span {
+        position: absolute;
+        width: 100%;
+        height: 0.1rem;
+        background-color: black;
+        left: 0;
+        transform-origin: center;
+        transition: top .2s ease, transform .2s ease;
+    }
+
+    span:nth-of-type(1n) {
+        top: calc(50% - 0.2rem);
+    }
+
+    span:nth-of-type(2n) {
+        top: calc(50% + 0.2rem);
+    }
+
+    &.open {
+        span {
+            top: 50%;
+            transition: top .1s ease, transform .2s ease .1s;
+        }
+
+        span:nth-of-type(1n) {
+            transform: rotate(45deg);
+        }
+
+        span:nth-of-type(2n) {
+            transform: rotate(-45deg);
+        }
+    }
+}
