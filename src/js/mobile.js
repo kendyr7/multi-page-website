@@ -40,7 +40,7 @@ function populateCountryList(selectedCountry) {
 
 // Pre-load and display América Central countries on page load
 window.addEventListener('load', () => {
-    populateCountryList('América Central');
+    populateCountryList('América del Norte');
 });
 
 // Event listener for the country selector

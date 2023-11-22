@@ -1,5 +1,4 @@
 // PRICING SECTION STYLES
-
 .flag {
     width: 50px;
     height: 32px;
@@ -265,7 +264,7 @@ p {
     }
 
     &.for-mobile {
-        width: 400px;
+        width: 70%;
         margin: 0 auto;
 
         h2 {
@@ -300,7 +299,6 @@ p {
         
         ul li {
             padding: 1rem;
-            padding-left: 12rem;
             border: 1px solid #dfd7d7;
             margin-bottom: 5px;
         }

@@ -1301,7 +1301,7 @@ p {
   }
 }
 .compare-table.for-mobile {
-  width: 400px;
+  width: 70%;
   margin: 0 auto;
 }
 .compare-table.for-mobile h2 {
@@ -1333,7 +1333,6 @@ p {
 }
 .compare-table.for-mobile ul li {
   padding: 1rem;
-  padding-left: 12rem;
   border: 1px solid #dfd7d7;
   margin-bottom: 5px;
 }
