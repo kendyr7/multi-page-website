@@ -14,6 +14,9 @@
   <script src="https://kit.fontawesome.com/9792bc5b24.js"></script>
   <script type="module" src="../src/js/mobile.js"></script>
 
+  <!--===== Boxicons CSS =====-->
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
   <title>CEM | Region</title>
 </head>
 
@@ -37,6 +40,30 @@
       <hr class="show-for-mobile">
       
       <a class="btn btn--header btn--black">ENTRAR</a>
+
+      <!-- Dropdown code -->
+      <div class="select-menu">
+        <div class="select-btn">
+            <span class="sBtn-text">Select language</span>
+            <i class="bx bx-chevron-down"></i>
+        </div>
+
+        <ul class="options">
+            <li class="option">
+                <i class="bx bxl-github" style="color: #171515;"></i>
+                <span class="option-text">Español</span>
+            </li>
+            <li class="option">
+                <i class="bx bxl-instagram-alt" style="color: #E1306C;"></i>
+                <span class="option-text">Português</span>
+            </li>
+            <li class="option">
+                <i class="bx bxl-linkedin-square" style="color: #0E76A8;"></i>
+                <span class="option-text">ភាសាខ្មែរ</span>
+            </li>
+        </ul>
+    </div>
+      <!-- End of Dropdown code -->
     </div>
   </header>
   <div class="page-container">
@@ -161,6 +188,9 @@
     </footer>
 
   </div>
+
+  <script src="../src/js/dropdown.js"></script>
+
 </body>
 
 </html>

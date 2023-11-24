@@ -1424,7 +1424,7 @@ p {
 }
 
 .body {
-  background: linear-gradient(to top, rgba(0, 115, 210, 0.8), rgba(1, 27, 48, 0.8)), url(/assets/pricing/desktop/banner.jpg) no-repeat top center;
+  background: linear-gradient(to top, rgba(0, 115, 210, 0.8), rgba(1, 27, 48, 0.8)), url(/../assets/pricing/desktop/banner.jpg) no-repeat top center;
   font-size: 2vmin;
   height: 600px;
   background-position: center;
@@ -1491,6 +1491,61 @@ p {
     display: none;
   }
 }
+.select-menu {
+  width: 230px;
+  margin: 0;
+  position: relative;
+}
+.select-menu .select-btn {
+  display: flex;
+  height: 55px;
+  background: #fff;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.select-menu .select-btn i {
+  font-size: 25px;
+  transition: 0.3s;
+}
+.select-menu.active .select-btn i {
+  transform: rotate(-180deg);
+}
+.select-menu .options {
+  position: absolute;
+  margin-top: 10px;
+  background: #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  display: none;
+  width: 100%;
+}
+.select-menu.active .options {
+  display: block;
+}
+.select-menu .options .option {
+  display: flex;
+  height: 55px;
+  cursor: pointer;
+  padding: 20px;
+  align-items: center;
+  background: #fff;
+}
+.select-menu .options .option:hover {
+  background: #F2F2F2;
+}
+.select-menu .option i {
+  font-size: 25px;
+  margin-right: 12px;
+}
+.select-menu .option .option-text {
+  font-size: 18px;
+  color: #333;
+}
+
 .stories-page .banner {
   background: #0073d2, url(../../assets/stories/desktop/moon-of-appalacia.jpg) no-repeat center;
   background-size: cover;
