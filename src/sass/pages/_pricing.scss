@@ -203,7 +203,7 @@
     }
 
     h1 {
-        margin-bottom: 3rem;
+        margin-bottom: 1.5rem;
 
         @include respond-below('sm') {
             display: none;
@@ -212,7 +212,12 @@
 }
 
 p {
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
+    color: #0073d2;
+    font-weight: 700;
+    padding: 0.5rem;
+    border-radius: 8px;
+    
 
     @include respond-below('sm') {
         display: none;
@@ -241,10 +246,14 @@ p {
 
         tr {
             height: 6.3rem;
-            border-bottom: 1px solid $c-black;
-
+            border-bottom: 1px solid #e9dede;
+        }    
+            tr:first-child {
+                height: 6.3rem;
+                border-bottom: 1px solid $c-black;
+            
             &:not(:last-child) {
-                border-bottom: 1px solid #f7f0f0;
+                border-bottom: 1px solid #e9dede;
             }
         }
 
@@ -310,5 +319,83 @@ p {
         @include respond-above('sm') {
             display: none;
         }
+    }
+}
+
+
+
+
+.body {
+    background: linear-gradient(to top, rgba(#0073d2, 0.8), rgba(#011b30, 0.8)), url(/assets/pricing/desktop/banner.jpg) no-repeat top center;
+    font-size: 2vmin;
+    height: 600px;
+    background-position: center;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #12e7d2;
+}
+
+.string {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    animation: move 4s infinite;
+}
+
+.greeting {
+    position: relative;
+    top: 8.6vmin;
+    animation: white-out 5s infinite;
+}
+
+.closure::after {
+    content: '';
+    position: absolute;
+    height: 25vmin;
+    width: 40vmin;
+    
+    transform: translate(-45vmin, -24.5vmin);
+}
+
+.closure::before {
+    content: '';
+    position: absolute;
+    height: 25vmin;
+    width: 40vmin;
+    
+    transform: translate(-40vmin, 5vmin);
+}
+
+@keyframes move {
+    25% {
+        transform: translatey(-5.8vmin);
+        opacity: 1;
+    }
+    50% {
+        transform: translatey(-11vmin);
+    }
+    75% {
+        transform: translatey(-16.5vmin);
+    }
+}
+
+/* Media query for mobile */
+@media screen and (max-width: 768px) {
+    .body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .string {
+        padding-top: 6rem;
+    }
+
+    .closure {
+        display: none;
     }
 }

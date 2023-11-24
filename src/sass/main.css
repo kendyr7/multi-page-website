@@ -1246,7 +1246,7 @@ table {
   }
 }
 .comparison h1 {
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 @media only screen and (max-width: 37.9em) {
   .comparison h1 {
@@ -1255,7 +1255,11 @@ table {
 }
 
 p {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
+  color: #0073d2;
+  font-weight: 700;
+  padding: 0.5rem;
+  border-radius: 8px;
 }
 @media only screen and (max-width: 37.9em) {
   p {
@@ -1283,10 +1287,14 @@ p {
 }
 .compare-table:not(.for-mobile) tr {
   height: 6.3rem;
+  border-bottom: 1px solid #e9dede;
+}
+.compare-table:not(.for-mobile) tr:first-child {
+  height: 6.3rem;
   border-bottom: 1px solid #0073d2;
 }
-.compare-table:not(.for-mobile) tr:not(:last-child) {
-  border-bottom: 1px solid #f7f0f0;
+.compare-table:not(.for-mobile) tr:first-child:not(:last-child) {
+  border-bottom: 1px solid #e9dede;
 }
 .compare-table:not(.for-mobile) td, .compare-table:not(.for-mobile) th {
   width: 20%;
@@ -1345,6 +1353,75 @@ p {
   }
 }
 
+.body {
+  background: linear-gradient(to top, rgba(0, 115, 210, 0.8), rgba(1, 27, 48, 0.8)), url(/assets/pricing/desktop/banner.jpg) no-repeat top center;
+  font-size: 2vmin;
+  height: 600px;
+  background-position: center;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #12e7d2;
+}
+
+.string {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  animation: move 4s infinite;
+}
+
+.greeting {
+  position: relative;
+  top: 8.6vmin;
+  animation: white-out 5s infinite;
+}
+
+.closure::after {
+  content: "";
+  position: absolute;
+  height: 25vmin;
+  width: 40vmin;
+  transform: translate(-45vmin, -24.5vmin);
+}
+
+.closure::before {
+  content: "";
+  position: absolute;
+  height: 25vmin;
+  width: 40vmin;
+  transform: translate(-40vmin, 5vmin);
+}
+
+@keyframes move {
+  25% {
+    transform: translatey(-5.8vmin);
+    opacity: 1;
+  }
+  50% {
+    transform: translatey(-11vmin);
+  }
+  75% {
+    transform: translatey(-16.5vmin);
+  }
+}
+/* Media query for mobile */
+@media screen and (max-width: 768px) {
+  .body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .string {
+    padding-top: 6rem;
+  }
+  .closure {
+    display: none;
+  }
+}
 .stories-page .banner {
   background: #0073d2, url(../../assets/stories/desktop/moon-of-appalacia.jpg) no-repeat center;
   background-size: cover;
