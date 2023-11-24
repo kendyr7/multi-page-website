@@ -727,8 +727,7 @@ table {
 .footer {
   width: 100%;
 }
-
-.footer-container {
+.footer__container {
   width: 100%;
   background: linear-gradient(to right, #0073d2, #004e91);
   color: #fff;
@@ -736,15 +735,13 @@ table {
   font-size: 13px;
   line-height: 20px;
 }
-
-.footer-p, .footer-h3, .footer-h4 {
+.footer__text, .footer__title, .footer__phone {
   font-size: inherit;
   color: white;
   margin: 0;
   padding: 0;
 }
-
-.row-footer {
+.footer__row {
   width: 85%;
   margin: auto;
   display: flex;
@@ -752,46 +749,38 @@ table {
   align-items: flex-start;
   justify-content: space-between;
 }
-
-.col-footer {
+.footer__col {
   flex-basis: 25%;
   padding: 10px;
 }
-
-.col-footer:nth-child(2), .col:nth-child(3) {
+.footer__col:nth-child(2), .footer__col:nth-child(3) {
   flex-basis: 15%;
 }
-
-.logo {
-  width: 180px;
-  margin-bottom: 30px;
-}
-
-.col-footer h3 {
+.footer__col h3 {
   width: -moz-fit-content;
   width: fit-content;
   margin-bottom: 40px;
   position: relative;
 }
-
-.email-id {
+.footer__logo {
+  width: 180px;
+  margin-bottom: 30px;
+}
+.footer__email {
   width: -moz-fit-content;
   width: fit-content;
   margin: 20px 0;
   color: white;
 }
-
-.footer-ul li {
+.footer__list li {
   list-style: none;
   margin-bottom: 12px;
 }
-
-.footer-ul li a {
+.footer__list li a {
   text-decoration: none;
   color: #fff;
 }
-
-form {
+.footer form {
   padding-bottom: 15px;
   display: flex;
   align-items: center;
@@ -799,13 +788,11 @@ form {
   border-bottom: 1px solid #ccc;
   margin-bottom: 50px;
 }
-
-form .far {
+.footer form .far {
   font-size: 18px;
   margin-right: 10px;
 }
-
-form input {
+.footer form input {
   width: 100%;
   font-family: inherit;
   background: transparent;
@@ -813,28 +800,23 @@ form input {
   border: 0;
   outline: none;
 }
-
-::-moz-placeholder {
+.footer form input ::-moz-placeholder {
   color: white;
 }
-
-::placeholder {
+.footer form input ::placeholder {
   color: white;
 }
-
-form button {
+.footer form button {
   background: transparent;
   border: 0;
   outline: none;
   cursor: pointer;
 }
-
-form button .fas, .far {
+.footer form button .fas, .footer form button .far {
   font-size: 16px;
   color: #fff;
 }
-
-.social-icons .fab {
+.footer__social-icons .fab {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -846,20 +828,17 @@ form button .fas, .far {
   margin-right: 15px;
   cursor: pointer;
 }
-
-hr {
+.footer hr {
   width: 90%;
   border: 0;
   border-bottom: 1px solid #fff;
   margin: 20px auto;
 }
-
-.copyrigth {
+.footer__copyright {
   text-align: center;
   color: white;
 }
-
-.underline {
+.footer__underline {
   width: 100%;
   height: 5px;
   background: #fff;
@@ -869,8 +848,7 @@ hr {
   left: 0;
   overflow: hidden;
 }
-
-.underline span {
+.footer__underline span {
   width: 15px;
   height: 100%;
   background: #12e7d2;
@@ -880,7 +858,6 @@ hr {
   left: 10px;
   animation: moving 2s linear infinite;
 }
-
 @keyframes moving {
   0% {
     left: -20px;
@@ -890,40 +867,33 @@ hr {
   }
 }
 @media (max-width: 708px) {
-  .logo {
+  .footer__logo {
     width: 180px;
     margin: 0 auto;
     padding-bottom: 3rem;
     display: block;
   }
-  .footer-p,
-  .footer-h3,
-  .footer-h4,
-  .email-id {
+  .footer__text, .footer__title, .footer__phone, .footer__email {
     display: block;
-    /* Adjust styling as needed */
   }
-  .footer-h3 {
+  .footer__title {
     margin-top: 20px;
   }
-  .footer {
-    bottom: unset;
-  }
-  .col-footer {
+  .footer__col {
     flex-basis: 100%;
-    padding: 5px; /* Adjust padding for smaller screens */
+    padding: 5px;
   }
-  .col-footer:nth-child(2),
-  .col-footer:nth-child(3) {
+  .footer__col:nth-child(2), .footer__col:nth-child(3) {
     display: block;
     flex-basis: 100%;
   }
-  .social-icons {
-    display: flex; /* Use flexbox for social icons */
-    justify-content: center; /* Horizontally center icons */
-    align-items: center; /* Vertically center icons */
+  .footer__social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
+
 .header {
   background-color: #FFFFFF;
   overflow: hidden;
