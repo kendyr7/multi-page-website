@@ -1044,6 +1044,10 @@ table {
   }
 }
 
+.img {
+  width: 190px;
+}
+
 .flag {
   width: 50px;
   height: 32px;
@@ -1275,23 +1279,16 @@ p {
   cursor: pointer;
 }
 .compare-table:not(.for-mobile) {
-  max-width: 74rem;
+  max-width: 82rem;
 }
 .compare-table:not(.for-mobile) tr {
   height: 6.3rem;
   border-bottom: 1px solid #0073d2;
 }
 .compare-table:not(.for-mobile) tr:not(:last-child) {
-  border-bottom: 1px solid #DFDFDF;
+  border-bottom: 1px solid #f7f0f0;
 }
-.compare-table:not(.for-mobile) td:first-child,
-.compare-table:not(.for-mobile) th:first-child {
-  width: 25%;
-  padding: 1rem;
-}
-.compare-table:not(.for-mobile) td:not(:first-child),
-.compare-table:not(.for-mobile) th:not(:first-child) {
-  text-align: left;
+.compare-table:not(.for-mobile) td, .compare-table:not(.for-mobile) th {
   width: 20%;
   padding: 1rem;
 }

@@ -1,3 +1,8 @@
+//DROPDOWN
+
+.img {
+    width: 190px;
+}
 // PRICING SECTION STYLES
 .flag {
     width: 50px;
@@ -232,31 +237,23 @@ p {
     }
 
     &:not(.for-mobile) {
-        max-width: 74rem;
+        max-width: 82rem;
 
         tr {
             height: 6.3rem;
             border-bottom: 1px solid $c-black;
 
             &:not(:last-child) {
-                border-bottom: 1px solid $c-grey;
+                border-bottom: 1px solid #f7f0f0;
             }
         }
 
-        td,
-        th {
-            &:first-child {
-                width: 25%;
-                padding: 1rem;
-            }
-
-            &:not(:first-child) {
-                text-align: left;
-                width: 20%;
-                padding: 1rem;
-            }
-            
+        td, th {
+            width: 20%;
+            padding: 1rem;
         }
+
+        
 
         @include respond-below('sm') {
             display: none;
